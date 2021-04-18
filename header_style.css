@@ -1,0 +1,137 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color:#37474F;
+}
+
+.header-container {
+    background: url('img/header-bg.jpg') no-repeat;
+    background-size: cover;
+    min-height: 690px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #37474F;
+    margin: 35px 0;
+}
+
+.header::before {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgba(55, 71, 79,  0.2);
+    margin-right: 25px;
+}
+
+.header::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgba(55, 71, 79,  0.2);
+    margin-left: 25px;
+}
+
+@media screen and (max-width: 576px) {
+    .header::before, .header::after {
+        display: none;
+    }
+}
+
+.content-row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description__button {
+    display: inline-block;
+    padding: 12px 120px;
+    background: rgb(229,26,47);
+    background: linear-gradient(120deg, rgba(229,26,47,1) 20%, rgba(192,32,38,1) 20%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border-bottom: 5px solid #940D12;
+    position: relative;
+    z-index: 1;
+}
+
+.description__button:visited {
+    color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+    .description__button {
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .description__button:hover {
+        color: #fff;
+    }
+
+    .description__button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, rgba(229,26,47,1) 80%, rgba(192,32,38,1) 80%);
+        opacity: 0;
+        transition: opacity, .7s;
+        z-index: -1;
+        border-radius: 5px;
+    }
+
+    .description__button:hover::before {
+        opacity: 1;
+    }
+}
+
+.description__text {
+    padding: 20px 0;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.list-group {
+    border-radius:0;
+}
+
+.list-group-item {
+    border:none;
+    background: none;
+    padding:21px 0 21px 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .list-group-item {
+        padding:11px 0 11px 15px;
+    }
+}
+
+.list-group-item.active {
+    background: #37474F;
+}
+
+.list-group-item:not(.active):hover {
+    background: rgba(55, 71, 79,  0.04);
+}
+
+.divider {
+    display: block;
+    width:100%;
+    height:1px;
+    background:rgba(55, 71, 79,  0.4);
+    margin:10px 0;
+}
