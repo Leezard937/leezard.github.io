@@ -63,6 +63,10 @@ body {
     color: #fff;
 }
 
+.description__button:hover {
+    color: #fff;
+}
+
 @media screen and (max-width: 992px) {
     .description__button {
         width: 100%;
@@ -72,10 +76,6 @@ body {
     }
 }
 @media screen and (min-width: 768px) {
-    .description__button:hover {
-        color: #fff;
-    }
-
     .description__button::before {
         content: "";
         position: absolute;
